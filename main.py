@@ -1,10 +1,8 @@
 import cv2
 import numpy as np
 import kociemba as Cube
-import time
 
 
-time.sleep(2)
 print("Please refer preview window for which side you have scanned and which color should be in centre on each side. ")
 
 state = {
@@ -95,7 +93,6 @@ textPoints = {
 check_state = []
 solution = []
 solved = False
-
 cap = cv2.VideoCapture(0)
 cv2.namedWindow('frame')
 
@@ -111,18 +108,18 @@ def solve(state):
 
 def color_detect(h, s, v):
     # print(h,s,v)
-    if h < 5 and s > 5:
-        return 'red'
-    elif h < 10 and h >= 3:
+    if h < 15 and s < 205:
         return 'orange'
-    elif h <= 25 and h > 10:
+    elif 25 < h < 40 and v > 205:
         return 'yellow'
-    elif h >= 70 and h <= 85 and s > 100 and v < 180:
+    elif 40 < h < 75 and s > 128:
         return 'green'
-    elif h <= 130 and s > 70:
-        return 'blue'
-    elif h <= 100 and s < 10 and v < 200:
+    elif 85 < h < 100 and s < 51 and v > 205:
         return 'white'
+    elif 90 < h <= 130 and s > 70:
+        return 'blue'
+    elif 170 < h < 180 and v > 76:
+        return 'red'
 
     return 'white'
 
@@ -161,7 +158,10 @@ if __name__ == '__main__':
 
     preview = np.zeros((700, 800, 3), np.uint8)
 
+    # url = "http://192.168.1.43:8080/shot.jpg?rnd=575591"
     while True:
+        # cap = cv2.VideoCapture(url)
+        # cv2.namedWindow('frame')
         hsv = []
         current_state = []
         ret, img = cap.read()
