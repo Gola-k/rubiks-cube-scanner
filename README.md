@@ -3,17 +3,17 @@ It uses opencv python to take images of a jumbled rubiks cube from webcam and gi
 
 You must scan the sides in the order U,L,F,R,B,D
 
-(Upper center): WHITE
+(Upper center): WHITE   Press U for scanning
 
-(Left center): ORANGE
+(Left center): ORANGE   Press L for scanning
 
-(Front center): GREEN
+(Front center): GREEN   Press F for scanning
 
-(Right center): RED
+(Right center): RED     Press R for scanning
 
-(Back center): BLUE
+(Back center): BLUE     Press B for scanning
 
-(Down center): YELLOW
+(Down center): YELLOW   Press D for scanning
 
 Press ENTER after scanning all sides
 Solution will apppear on command line
