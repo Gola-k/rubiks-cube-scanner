@@ -5,15 +5,15 @@ You must scan the sides in the order U,L,F,R,B,D
 
 (Upper center): WHITE   Press U for scanning
 
-(Left center): ORANGE   Press L for scanning
+(Right center): RED     Press R for scanning
 
 (Front center): GREEN   Press F for scanning
 
-(Right center): RED     Press R for scanning
+(Down center): YELLOW   Press D for scanning
+
+(Left center): ORANGE   Press L for scanning
 
 (Back center): BLUE     Press B for scanning
-
-(Down center): YELLOW   Press D for scanning
 
 Press ENTER after scanning all sides
 Solution will apppear on command line
