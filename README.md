@@ -1,7 +1,7 @@
 # rubiks-cube-scanner
 It uses opencv python to take images of a jumbled rubiks cube from webcam and gives a series of solution to solve it
 
-You must scan the sides in the order U,L,F,R,B,D
+You must scan the sides in the order U,R,F,D,L,B
 
 (Upper center): WHITE   Press U for scanning
 
